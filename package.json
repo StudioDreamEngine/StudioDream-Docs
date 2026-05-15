@@ -9,15 +9,13 @@
   "scripts": {
     "dev": "node autogen/mdgen.js && mkdocs serve",
     "build": "npm run gen && mkdocs build",
-    "build-ci": "npm i && node autogen/mdgen.js && mkdocs build",
-    "gen": "node autogen/yamlgen.js && node autogen/mdgen.js"
+    "build-ci": "npm i && node autogen/mdgen.js && mkdocs build"
   },
   "keywords": [],
   "author": "Polytoria Contributors",
   "license": "MIT",
   "type": "commonjs",
   "dependencies": {
-    "fast-xml-parser": "^5.3.3",
     "yaml": "^2.8.2"
   }
 }

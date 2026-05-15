@@ -1,8 +1,5 @@
 ---
-title: APIs
-weight: 2
+title: Api Reference
 ---
 
-# APIs
-
-Browse the Polytoria 2.0 scripting API reference.
+# API

@@ -2,11 +2,11 @@ const fs = require("fs")
 const path = require("path")
 const yaml = require("yaml")
 
-const yamlAPIPath = path.join(__dirname, "../", "yaml", "types")
-const mdAPIPath = path.join(__dirname, "../", "docs/api", "types")
+const yamlAPIPath = path.join(__dirname, "../", "yaml", "classes")
+const mdAPIPath = path.join(__dirname, "../", "docs/api", "classes")
 const iconDataPath = path.join(__dirname, "../", "docs/theme/.icons", "polytoria")
-const yamlEnumPath = path.join(__dirname, "../", "yaml", "enums")
-const mdEnumPath = path.join(__dirname, "../", "docs/api", "enums")
+//const yamlEnumPath = path.join(__dirname, "../", "yaml", "enums")
+//const mdEnumPath = path.join(__dirname, "../", "docs/api", "enums")
 
 // Cleanup md (excluding index.md files)
 if (fs.existsSync(mdAPIPath)) {
@@ -19,7 +19,7 @@ if (fs.existsSync(mdAPIPath)) {
     }
 }
 
-if (fs.existsSync(mdEnumPath)) {
+/*if (fs.existsSync(mdEnumPath)) {
     const files = fs.readdirSync(mdEnumPath)
     for (const file of files) {
         if (file !== 'index.md') {
@@ -27,7 +27,7 @@ if (fs.existsSync(mdEnumPath)) {
             fs.rmSync(filePath, { recursive: true, force: true })
         }
     }
-}
+}*/
 
 // Create directories
 if (!fs.existsSync(mdAPIPath)) {
@@ -38,13 +38,13 @@ if (!fs.existsSync(yamlAPIPath)) {
     fs.mkdirSync(yamlAPIPath, { recursive: true })
 }
 
-if (!fs.existsSync(mdEnumPath)) {
+/*if (!fs.existsSync(mdEnumPath)) {
     fs.mkdirSync(mdEnumPath, { recursive: true })
 }
 
 if (!fs.existsSync(yamlEnumPath)) {
     fs.mkdirSync(yamlEnumPath, { recursive: true })
-}
+}*/
 
 // Process API Classes
 const yamlFiles = fs.readdirSync(yamlAPIPath).filter(file => file.endsWith('.yaml'));
@@ -205,7 +205,7 @@ for (const yamlFile of yamlFiles) {
 console.log(`Converted ${yamlFiles.length} YAML files to Markdown`)
 
 // Process Enums
-const yamlEnumFiles = fs.readdirSync(yamlEnumPath).filter(file => file.endsWith('.yaml'));
+/*const yamlEnumFiles = fs.readdirSync(yamlEnumPath).filter(file => file.endsWith('.yaml'));
 
 for (const yamlFile of yamlEnumFiles) {
     const yamlPath = path.join(yamlEnumPath, yamlFile);
@@ -248,4 +248,4 @@ for (const yamlFile of yamlEnumFiles) {
     fs.writeFileSync(mdPath, mk)
 }
 
-console.log(`Converted ${yamlEnumFiles.length} enum YAML files to Markdown`)
+console.log(`Converted ${yamlEnumFiles.length} enum YAML files to Markdown`)*/
