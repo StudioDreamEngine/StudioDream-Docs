@@ -1,0 +1,7 @@
+Name: HUD
+Description: Global container used to display in game HUD.
+Category: UI
+BaseType: Container
+IsAbstract: true
+
+  

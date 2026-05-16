@@ -1,0 +1,7 @@
+Name: Root
+Description: Root container of your project.
+Category: Container
+BaseType: Container
+IsAbstract: true
+
+  

@@ -1,5 +1,5 @@
 Name: Thing
-Description: This is the base class for all objects
+Description: This is the base class for all things
 Category: General
 BaseType: ClassicObject
 IsAbstract: true
@@ -38,10 +38,10 @@ Methods:
     Parameters:
       - Name: Class
         Type: string
-    Description: Goes up in the tree until it finds a Object that matches the specified class
+    Description: Goes up in the tree until it finds a Thing that matches the specified class
     ReturnType: Thing
   - Name: Is
-    Description: Checks if this object
+    Description: Checks if this thing
     ReturnType: boolean
   - Name: GetParentCallback
     IsInternal: true

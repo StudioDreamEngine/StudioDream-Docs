@@ -1,0 +1,7 @@
+Name: Container
+Description: This is the base class for all Container things
+Category: Container
+BaseType: Thing
+IsAbstract: true
+
+  

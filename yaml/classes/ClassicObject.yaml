@@ -1,4 +1,4 @@
 Name: ClassicObject
-Description: Base class for all objects that use a class system.
+Description: Base class for all things that use a class system.
 Category: General
 IsAbstract: true

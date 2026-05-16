@@ -1,0 +1,12 @@
+Name: Folder
+Description: Used to organize things.
+Category: Container
+BaseType: Container
+IsAbstract: true
+Properties:
+  - Name: LockObjectsIn
+    Type: boolean
+    IsAccessible: true
+    IsInternal: false
+    Description: Used for moving tool in studio, It makes folder group every child to move together. #Better way to describe this
+  

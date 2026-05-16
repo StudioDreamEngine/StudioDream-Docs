@@ -1,0 +1,11 @@
+Name: Script
+Description: Local game script. #💀✌️
+Category: Scripting
+BaseType: BaseScript
+IsAbstract: false
+Methods:
+  - Name: SetScriptContents
+    ReturnType: ScriptContents
+    IsAccessible: false
+    IsInternal: true
+    Description: Sets new ScriptContents to the script if the script doesnt already have one.

@@ -1,0 +1,28 @@
+Name: Environment
+Description: Global container for showing visual stuff # placeholder desc until i find a better way to describe this
+Category: Container
+BaseType: Container
+IsAbstract: false
+Properties:
+  - Name: Viewport
+    Type: Thing
+    IsAccessible: true
+    IsInternal: false
+    Description: Current attached Viewport attached to Environment
+  - Name: Camera
+    Type: Thing
+    IsAccessible: true
+    IsInternal: false
+    Description: Current attached Camera attached to Environment
+Methods:
+  - Name: Raycast
+    ReturnType: Table
+    IsAccessible: true
+    IsInternal: false
+    Description: Shoots a raycast based at given origin position and direction position.
+  - Name: GetCamera
+    ReturnType: Thing
+    IsAccessible: true
+    IsInternal: false
+    Description: Returns attached camera to container or attached viewport camera.
+  

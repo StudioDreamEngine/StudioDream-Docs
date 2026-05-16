@@ -1,0 +1,27 @@
+Name: BaseScript
+Description: This is the base class for all scripts
+Category: Scripting
+BaseType: Thing
+IsAbstract: true
+Properties:
+  - Name: ScriptContents
+    Type: Vector2
+    IsAccessible: false
+    IsInternal: true
+    Description: Content inside the script.
+  - Name: ScriptTask
+    Type: Task
+    IsAccessible: false
+    IsInternal: true
+    Description: The task line script is running. # Probably theres a better way to describe this
+  - Name: Require
+    Type: Task
+    IsAccessible: false
+    IsInternal: true
+    Description: Script contents after initalization.
+Methods:
+  - Name: Load
+    ReturnType: ScriptContents
+    IsAccessible: false
+    IsInternal: true
+    Description: Initalize the script and return a table.
