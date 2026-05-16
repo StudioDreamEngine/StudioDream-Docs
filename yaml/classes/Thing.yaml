@@ -1,0 +1,58 @@
+Name: Thing
+Description: This is the base class for all objects
+Category: General
+BaseType: ClassicObject
+IsAbstract: true
+Properties:
+  - Name: Serializable
+    IsInternal: true
+    Type: boolean
+  - Name: Parent
+    IsAccessible: true
+    IsSerialized: true
+    Type: Thing
+  - Name: Name
+    IsAccessible: true
+    IsSerialized: true
+    Type: string
+  - Name: Type
+    IsAccessible: true
+    IsSerialized: false
+    Type: string
+  - Name: UUID
+    IsInternal: true
+    IsAccessible: true
+    Type: string
+Methods:
+  - Name: BindConstraint
+    IsInternal: true
+  - Name: SetConstraint
+    IsInternal: true
+  - Name: UnbindConstraints
+    IsInternal: true
+  - Name: FindConstraintOfType
+    IsInternal: true
+  - Name: GetProperty
+    IsInternal: true
+  - Name: FindFirstAncestorWithClass
+    Parameters:
+      - Name: Class
+        Type: string
+    Description: Goes up in the tree until it finds a Object that matches the specified class
+    ReturnType: Thing
+  - Name: Is
+    Description: Checks if this object
+    ReturnType: boolean
+  - Name: GetParentCallback
+    IsInternal: true
+  - Name: SetParent
+    IsInternal: true
+  - Name: DescendantOf
+    ReturnType: boolean
+  - Name: IsA
+    ReturnType: boolean
+  - Name: GetChildren
+    ReturnType: "{ Thing }"
+  - Name: GetDescendants
+  - Name: FindFirstChild
+  - Name: ClearAllChildren

@@ -14,7 +14,7 @@ theme:
     - toc.follow
   name: material
   custom_dir: docs/theme
-  logo: assets/logo.svg
+  logo: theme/logo.svg
   font:
     text: Rubik
   palette:
@@ -64,5 +64,3 @@ markdown_extensions:
       options:
         custom_icons:
           - docs/theme/.icons
-validation:
-  absolute_links: ignore

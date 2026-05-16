@@ -1,0 +1,29 @@
+Name: BaseGui
+Description: This is the base class for all GUI Objects
+Category: UI
+BaseType: Thing
+IsAbstract: true
+Properties:
+  - Name: AbsolutePosition
+    Type: Vector2
+    IsAccessible: true
+    IsInternal: true
+    Description: The position of the object relative to the viewport
+  - Name: AbsoluteSize
+    Type: Vector2
+    IsAccessible: true
+    IsInternal: true
+    Description: The size of the object relative to the viewport
+Methods:
+  - Name: GetOffsetPosition
+    ReturnType: Vector2
+    Description: Get the absolute position relative to the parent object
+  - Name: GetAbsolutePosition
+    ReturnType: Vector2
+  - Name: GetDisplayPosition
+    Description: Get the true position where the object is displayed (On the screen)
+    ReturnType: Vector2
+  - Name: GetAbsoluteSize
+    ReturnType: Vector2
+  - Name: Draw
+    Description:

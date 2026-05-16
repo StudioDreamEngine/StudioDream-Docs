@@ -106,7 +106,7 @@ def define_env(env):
         return """<div data-search-exclude markdown>
 
 !!! warning "Not newable"
-    This object cannot be created by scripts using `Instance.New()`.
+    This object cannot be created by scripts.
 
     </div>"""
 
@@ -115,56 +115,11 @@ def define_env(env):
         return """<div data-search-exclude markdown>
 !!! danger "Abstract Object"
     This object exists only to serve as a foundation for other objects. It cannot be accessed directly, but its properties are documented below.
-
-    Additionally, it cannot be created in the creator menu or with `Instance.New()`.
 </div>"""
-
-    @env.macro
-    def service():
-        return """<div data-search-exclude markdown>
-!!! example "Service Object"
-    This object is automatically created by Polytoria. Additionally, scripts cannot change its parent.
-</div>"""
-
-    @env.macro
-    def staticclass(className = ""):
-        if className != "":
-            return """<div data-search-exclude markdown>
-!!! tip "Static Class"
-    This object is a static class. It can be accessed like this: `%s`.
-
-    Additionally, it cannot be created in the creator menu or with `Instance.New()`.
-</div>""" % (className)
-        else:
-            return """<div data-search-exclude markdown>
-!!! tip "Static Class"
-    This object is a static class.
-
-    Additionally, it cannot be created in the creator menu or with `Instance.New()`.
-</div>"""
-
-    @env.macro
-    def serverexclusive():
-        return "!!! warning \"This is only available to the server. It can only be accessed within server scripts.\""
-
-    @env.macro
-    def clientexclusive():
-        return "!!! warning \"This is only available to the client. It can only be accessed within local scripts.\""
-
-    @env.macro
-    def nosync():
-        return """<div data-search-exclude markdown>
-!!! failure "Does not sync!"
-    This object does not sync across the server and client. It is recommended to avoid changing its properties from %ss, as the changes will not be visible to players.
-</div>""" % (getClassLink("Script"))
 
     @env.macro
     def readonly():
         return "!!! warning \"This property is read-only and cannot be modified.\""
-
-    @env.macro
-    def comingsoon():
-        return "!!! failure \"This currently does not exist but has been promised by Polytoria developers.\""
 
     @env.macro
     def classLink(className):

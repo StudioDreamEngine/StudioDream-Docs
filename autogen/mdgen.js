@@ -4,7 +4,7 @@ const yaml = require("yaml")
 
 const yamlAPIPath = path.join(__dirname, "../", "yaml", "classes")
 const mdAPIPath = path.join(__dirname, "../", "docs/api", "classes")
-const iconDataPath = path.join(__dirname, "../", "docs/theme/.icons", "polytoria")
+const iconDataPath = path.join(__dirname, "../", "docs/theme/.icons", "studiodream")
 //const yamlEnumPath = path.join(__dirname, "../", "yaml", "enums")
 //const mdEnumPath = path.join(__dirname, "../", "docs/api", "enums")
 
@@ -92,18 +92,28 @@ for (const yamlFile of yamlFiles) {
         mk += str + "\n"
     }
 
+    function addFlags(prop) {
+        let Flags = []
+
+        if (prop.IsAccessible) { Flags.push("Accessible") }
+        if (prop.IsSerialized) { Flags.push("Serialized") }
+        if (prop.IsInternal) { Flags.push("Internal") }
+
+        return `\`\`${Flags.join("\`\` \`\`")}\`\``
+    }
+
     appendLine("---")
     appendLine("title: " + c.Name)
     appendLine("description:")
     if (emojiExists) {
-        appendLine("icon: polytoria/" + c.Name)
+        appendLine("icon: studiodream/" + c.Name)
     } else {
-        appendLine("icon: polytoria/Unknown")
+        appendLine("icon: studiodream/Unknown")
     }
     appendLine("---")
     appendLine("")
     if (emojiExists) {
-        appendLine(`# :polytoria-${c.Name}: ` + c.Name)
+        appendLine(`# :studiodream-${c.Name}: ` + c.Name)
     } else {
         appendLine("# " + c.Name)
     }
@@ -124,18 +134,12 @@ for (const yamlFile of yamlFiles) {
     appendLine(c.Description)
     appendLine("")
 
-    if (c.IsStatic) {
-        appendLine("")
-        appendLine(`{{ staticclass(${c.StaticAlias ? `"${c.StaticAlias}"` : ""}) }}`)
-        appendLine("")
-    }
-
     if (c.IsAbstract) {
         appendLine("{{ abstract() }}")
         appendLine("")
     }
 
-    if (!c.IsInstantiable) {
+    if (!c.IsCreatable) {
         appendLine("{{ notnewable() }}")
         appendLine("")
     }
@@ -150,6 +154,7 @@ for (const yamlFile of yamlFiles) {
 
     for (const prop of properties) {
         appendLine(`### ${prop.Name}:${prop.Type} { property }`)
+        appendLine(addFlags(prop))
         appendLine(``)
         appendLine(prop.Description || "Missing documentation!")
         appendLine(``)
@@ -171,7 +176,10 @@ for (const yamlFile of yamlFiles) {
             params.push(`${p.Name};${p.Type}${p.IsOptional ? "?" : ""}`)
         }
 
+        m.IsAccessible = true // For now
+
         appendLine(`### ${m.Name}(${params.join(",")}):${m.ReturnType || "void"} { method }`)
+        appendLine(addFlags(m))
         appendLine(``)
         appendLine(m.Description || "Missing documentation!")
         appendLine(``)
