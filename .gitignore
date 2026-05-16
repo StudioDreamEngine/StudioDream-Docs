@@ -1,4 +1,7 @@
 __pycache__
 node_modules
 
+docs/api/classes/*
+.venv
+
 site

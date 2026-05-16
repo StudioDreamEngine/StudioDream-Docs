@@ -4,11 +4,9 @@ description:
 icon: studiodream/Unknown
 ---
 
-# ClassicObject
+# :studiodream-Unknown: ClassicObject
 
-{{ inherited_by(["Thing"]) }}
-
-Base class for all objects that use a class system.
+Base class for all things that use a class system.
 
 {{ abstract() }}
 

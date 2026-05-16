@@ -4,13 +4,11 @@ description:
 icon: studiodream/Unknown
 ---
 
-# Thing
+# :studiodream-Unknown: Thing
 
 {{ inherits("ClassicObject") }}
 
-{{ inherited_by(["BaseGui"]) }}
-
-This is the base class for all objects
+This is the base class for all things
 
 {{ abstract() }}
 
@@ -22,27 +20,27 @@ This is the base class for all objects
 ### Serializable:boolean { property }
 ``Internal``
 
-Missing documentation!
+Missing Documentation!
 
 ### Parent:Thing { property }
 ``Accessible`` ``Serialized``
 
-Missing documentation!
+Missing Documentation!
 
 ### Name:string { property }
 ``Accessible`` ``Serialized``
 
-Missing documentation!
+Missing Documentation!
 
 ### Type:string { property }
-``Accessible``
+``Accessible`` ``Serialized``
 
-Missing documentation!
+Missing Documentation!
 
 ### UUID:string { property }
 ``Accessible`` ``Internal``
 
-Missing documentation!
+Missing Documentation!
 
 
 ## Methods
@@ -50,75 +48,75 @@ Missing documentation!
 ### BindConstraint():void { method }
 ``Accessible`` ``Internal``
 
-Missing documentation!
+Missing Documentation!
 
 ### SetConstraint():void { method }
 ``Accessible`` ``Internal``
 
-Missing documentation!
+Missing Documentation!
 
 ### UnbindConstraints():void { method }
 ``Accessible`` ``Internal``
 
-Missing documentation!
+Missing Documentation!
 
 ### FindConstraintOfType():void { method }
 ``Accessible`` ``Internal``
 
-Missing documentation!
+Missing Documentation!
 
 ### GetProperty():void { method }
 ``Accessible`` ``Internal``
 
-Missing documentation!
+Missing Documentation!
 
 ### FindFirstAncestorWithClass(Class;string):Thing { method }
 ``Accessible``
 
-Goes up in the tree until it finds a Object that matches the specified class
+Goes up in the tree until it finds a Thing that matches the specified class
 
 ### Is():boolean { method }
 ``Accessible``
 
-Checks if this object
+Checks if this thing
 
 ### GetParentCallback():void { method }
 ``Accessible`` ``Internal``
 
-Missing documentation!
+Missing Documentation!
 
 ### SetParent():void { method }
 ``Accessible`` ``Internal``
 
-Missing documentation!
+Missing Documentation!
 
 ### DescendantOf():boolean { method }
 ``Accessible``
 
-Missing documentation!
+Missing Documentation!
 
 ### IsA():boolean { method }
 ``Accessible``
 
-Missing documentation!
+Missing Documentation!
 
 ### GetChildren():{ Thing } { method }
 ``Accessible``
 
-Missing documentation!
+Missing Documentation!
 
 ### GetDescendants():void { method }
 ``Accessible``
 
-Missing documentation!
+Missing Documentation!
 
 ### FindFirstChild():void { method }
 ``Accessible``
 
-Missing documentation!
+Missing Documentation!
 
 ### ClearAllChildren():void { method }
 ``Accessible``
 
-Missing documentation!
+Missing Documentation!
 
