@@ -41,7 +41,7 @@ Methods:
     Description: Goes up in the tree until it finds a Thing that matches the specified class
     ReturnType: Thing
   - Name: Is
-    Description: Checks if this thing
+    Description: Checks if this object
     ReturnType: boolean
   - Name: GetParentCallback
     IsInternal: true

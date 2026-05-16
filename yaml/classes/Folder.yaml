@@ -7,6 +7,6 @@ Properties:
   - Name: LockObjectsIn
     Type: boolean
     IsAccessible: true
-    IsInternal: false
+    IsInternal: true
     Description: Used for moving tool in studio, It makes folder group every child to move together. #Better way to describe this
   

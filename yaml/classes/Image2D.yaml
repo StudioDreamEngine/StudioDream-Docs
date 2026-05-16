@@ -1,0 +1,27 @@
+Name: Image2D
+Description: UI Image thing.
+Category: UI
+BaseType: BaseGui
+IsAbstract: false
+Properties:
+  - Name: Image
+    Type: File
+    IsAccessible: true
+    IsInternal: true
+    Description: The file directory that the image is gonna be displaying.
+  - Name: ImageRect
+    Type: Rect
+    IsAccessible: true
+    IsInternal: true
+    Description: ???
+  - Name: ImageQuad
+    Type: Rect
+    IsAccessible: true
+    IsInternal: true
+    Description: ???
+Methods:
+  - Name: SetImage
+    ReturnType: None
+    IsAccessible: false
+    IsInternal: true
+    Description: Sets new image to Image2D.
