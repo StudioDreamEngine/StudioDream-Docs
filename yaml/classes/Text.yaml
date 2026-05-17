@@ -1,0 +1,44 @@
+Name: Text
+Description: An thing that display a text
+Category: UI
+BaseType: Square
+IsCreatable: true
+Properties:
+  - Name: TextSize
+    Type: number
+    IsAccessible: true
+    IsInternal: false
+    Description: The size of the text that will be displayed
+  - Name: TextScale
+    Type: boolean
+    IsAccessible: true
+    IsInternal: false
+    Description: If this option is true, the text will be scale acording to the square size
+  - Name: Text
+    Type: boolean
+    IsAccessible: true
+    IsInternal: false
+    Description: Text that will be displayed on text thing
+  - Name: Aling
+    Type: Vector2
+    IsAccessible: true
+    IsInternal: false
+    Description: Aligns the text on, center, left, right, top or down
+  - Name: RenderClass
+    Type: Vector2
+    IsAccessible: true
+    IsInternal: false
+    Description: Object that handles rendering a piece of text
+Methods:
+   - Name: AttemptWrap
+     Parameters:
+      - Name: Size
+        Type: Vector2
+     Description: Attempts wrap on text
+     IsInternal: true
+   - Name: SetText
+     Parameters:
+      - Name: Text
+        Type: Vector2
+     Description: Set text on Text thing
+     IsInternal: true

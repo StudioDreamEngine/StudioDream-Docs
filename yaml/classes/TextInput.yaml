@@ -1,0 +1,30 @@
+Name: TextInput
+Description: TextInput is a writable Text Thing
+Category: UI
+BaseType: Text
+IsCreatable: true
+Properties:
+  - Name: Hovering
+    Type: boolean
+    IsAccessible: true
+    IsInternal: false
+    Description: If the mouse is hovering TextInput, it will be set to true
+  - Name: FocusStart
+    Type: Signal
+    IsAccessible: true
+    IsInternal: false
+    Description: Send a signal to connected functions if the TextInput starts typing
+  - Name: FocusEnd
+    Type: Signal
+    IsAccessible: true
+    IsInternal: false
+    Description: Send a signal to connected functions if the TextInput ends typing
+  - Name: Placeholder
+    Type: Signal
+    IsAccessible: true
+    IsInternal: false
+    Description: Placeholder is a text that is gonna be shown while you type nothing on TextInput
+Methods:
+  - Name: HandleKeys
+    Description: Removes a letter of text in TextInput if pressed or is holding Backspace key
+    IsInternal: true
