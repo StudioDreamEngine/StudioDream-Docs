@@ -2,7 +2,7 @@ Name: Image2D
 Description: UI Image thing.
 Category: UI
 BaseType: BaseGui
-IsAbstract: false
+IsCreatable: true
 Properties:
   - Name: Image
     Type: File

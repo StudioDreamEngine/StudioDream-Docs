@@ -2,7 +2,7 @@ Name: Square
 Description: Square UI thing
 Category: UI
 BaseType: BaseGui
-IsAbstract: false
+IsCreatable: true
 Properties:
   - Name: CornerRadius
     Type: number

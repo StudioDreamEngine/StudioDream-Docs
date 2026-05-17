@@ -24,10 +24,13 @@ def generate(source: path.Path, target: path.Path):
 
             inherited_by[file_yaml["BaseType"]].append(file_path.stem)
 
+    print("Finish pass 1")
+
     # Pass 2
     for file in os.listdir(source):
         # Setup some stuff
         file_path = source / file
+        print(file)
         file_yaml = classes[file_path.stem]
 
         target_path = target / file
@@ -86,7 +89,9 @@ def generate(source: path.Path, target: path.Path):
             append_line("")
 
         for prop in properties:
-            append_line(f"### {prop["Name"]}:{prop["Type"]} {{ property }}")
+            type = get_default(prop, "Type", "void")
+
+            append_line(f"### {prop["Name"]}:{type} {{ property }}")
             append_line(add_flags(prop))
             append_line("")
             append_line(get_default(prop, "Description", "Missing Documentation!"))
@@ -119,7 +124,7 @@ def generate(source: path.Path, target: path.Path):
 
         # TODO: Events
 
-        print(mk)
+        #print(mk)
 
         parent_path = target_path.parent 
 

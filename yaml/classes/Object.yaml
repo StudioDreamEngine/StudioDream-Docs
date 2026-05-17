@@ -7,3 +7,4 @@ Properties:
   IsAccessible: true
   IsSerialized: false
   Type: string
+  Description: The type of this object.
