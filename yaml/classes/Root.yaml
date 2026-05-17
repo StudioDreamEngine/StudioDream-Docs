@@ -1,6 +1,6 @@
 Name: Root
 Description: Root container of your project.
-Category: Container
+Category: Containers
 BaseType: Container
 IsAbstract: true
 

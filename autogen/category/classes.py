@@ -73,11 +73,11 @@ def generate(source: path.Path, target: path.Path):
         append_line(file_yaml["Description"])
         append_line("")
 
-        if ("IsAbstract" in file_yaml.keys()):
+        if get_default(file_yaml, "IsAbstract"):
             append_line("{{ abstract() }}")
             append_line("")
 
-        if not ("IsCreatable" in file_yaml.keys()):
+        if not get_default(file_yaml, "IsCreatable"):
             append_line("{{ notnewable() }}")
             append_line("")
 

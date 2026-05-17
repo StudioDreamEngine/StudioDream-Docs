@@ -1,6 +1,6 @@
 Name: Thing
 Description: This is the base class for all things
-Category: General
+Category: Internal
 BaseType: ClassicObject
 IsAbstract: true
 Properties:

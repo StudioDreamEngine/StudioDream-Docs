@@ -1,6 +1,6 @@
 Name: Folder
 Description: Used to organize things.
-Category: Container
+Category: Containers
 BaseType: Container
 IsAbstract: true
 Properties:

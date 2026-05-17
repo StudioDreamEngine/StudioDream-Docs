@@ -1,6 +1,6 @@
 Name: Environment
 Description: Global container for showing visual stuff # placeholder desc until i find a better way to describe this
-Category: Global
+Category: Containers
 BaseType: Container
 IsAbstract: false
 Properties:
