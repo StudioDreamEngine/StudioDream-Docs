@@ -13,6 +13,7 @@ def generate(source: path.Path, target: path.Path):
     # Pass 1
     for file in os.listdir(source):
         file_path = source / file
+        print(file)
         file_yaml = yaml.load(open(file_path), Loader=yaml.FullLoader)
 
         classes.update({file_path.stem: file_yaml})

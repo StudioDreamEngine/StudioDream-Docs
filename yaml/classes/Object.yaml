@@ -4,6 +4,6 @@ Category: Internal
 IsAbstract: true
 Properties:
 - Name: Type
-    IsAccessible: true
-    IsSerialized: false
-    Type: string
+  IsAccessible: true
+  IsSerialized: false
+   Type: string
