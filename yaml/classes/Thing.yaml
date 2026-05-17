@@ -48,7 +48,7 @@ Methods:
     Description: Goes up in the tree until it finds a Thing that matches the specified class
     ReturnType: Thing
   - Name: Is
-    Description: Checks if this object
+    Description: Checks if this thing
     ReturnType: boolean
   - Name: GetParentCallback
     IsInternal: true
@@ -57,9 +57,26 @@ Methods:
   - Name: DescendantOf
     ReturnType: boolean
   - Name: IsA
+    Parameters:
+      - Name: Check
+        Type: "{ Thing }"
+        Description: Name of the class your trying to check
     ReturnType: boolean
+    Description: Checks if thing class Is A certan class
   - Name: GetChildren
     ReturnType: "{ Thing }"
+    Description: Returns a table of all the children inside the thing, that does not include children inside the childre
   - Name: GetDescendants
+    ReturnType: "{ Thing }"
+    Description: Returns a table of everything inside the thing
   - Name: FindFirstChild
+    Parameters:
+      - Name: Filter
+        Type: "{ Thing }"
+        Description: Name of the children your trying to find
   - Name: ClearAllChildren
+    Parameters:
+      - Name: Filter
+        Type: "table"
+        Description: You can add name of things to not be deleted
+    Description: Clears all children inside thing

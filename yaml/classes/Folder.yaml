@@ -2,7 +2,7 @@ Name: Folder
 Description: Used to organize things.
 Category: Containers
 BaseType: Container
-IsAbstract: true
+IsAbstract: false
 Properties:
   - Name: LockObjectsIn
     Type: boolean
