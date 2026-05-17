@@ -6,4 +6,4 @@ Properties:
 - Name: Type
   IsAccessible: true
   IsSerialized: false
-   Type: string
+  Type: string

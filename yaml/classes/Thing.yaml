@@ -6,31 +6,29 @@ IsAbstract: true
 Properties:
   - Name: Serializable
     IsInternal: true
-    Type: boolean
+    ReturnType: boolean
   - Name: Parent
     IsAccessible: true
     IsSerialized: true
-    Type: Thing
+    ReturnType: Thing
   - Name: Name
     IsAccessible: true
     IsSerialized: true
-    Type: string
+    ReturnType: string
   - Name: Explorer
     IsAccessible: true
     IsInternal: true
     Description: Special Properties for how this object should be displayed in the explorer
-
-  
   - Name: UUID
     Description: The Unique ID given to this object
     IsInternal: true
     IsAccessible: true
-    Type: string
+    ReturnType: string
   - Name: NumericalID
     Description: Secondary ID, potentially used for debugging, i forgot why we have this
     IsInternal: true
     IsAccessible: true
-    Type: number
+    ReturnType: number
 Methods:
   - Name: BindConstraint
     IsInternal: true
