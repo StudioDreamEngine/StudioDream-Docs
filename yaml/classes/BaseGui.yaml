@@ -25,5 +25,3 @@ Methods:
     ReturnType: Vector2
   - Name: GetAbsoluteSize
     ReturnType: Vector2
-  - Name: Draw
-    Description:

@@ -1,0 +1,21 @@
+Name: Square
+Description: Square UI thing
+Category: UI
+BaseType: BaseGui
+IsAbstract: false
+Properties:
+  - Name: CornerRadius
+    Type: number
+    IsAccessible: true
+    IsInternal: true
+    Description: Smooth out square corners depending on the value.
+  - Name: OutlineSize
+    Type: number
+    IsAccessible: true
+    IsInternal: true
+    Description: Outside outline size
+  - Name: OutlineColor
+    Type: number
+    IsAccessible: true
+    IsInternal: true
+    Description: Outside outline color
