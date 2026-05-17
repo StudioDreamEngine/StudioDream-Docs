@@ -1,2 +1,2 @@
 python ./autogen/generate.py
-mkdocs serve
+python -m mkdocs serve

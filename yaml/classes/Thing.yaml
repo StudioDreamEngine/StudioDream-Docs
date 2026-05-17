@@ -15,14 +15,22 @@ Properties:
     IsAccessible: true
     IsSerialized: true
     Type: string
-  - Name: Type
+  - Name: Explorer
     IsAccessible: true
-    IsSerialized: false
-    Type: string
+    IsInternal: true
+    Description: Special Properties for how this object should be displayed in the explorer
+
+  
   - Name: UUID
+    Description: The Unique ID given to this object
     IsInternal: true
     IsAccessible: true
     Type: string
+  - Name: NumericalID
+    Description: Secondary ID, potentially used for debugging, i forgot why we have this
+    IsInternal: true
+    IsAccessible: true
+    Type: number
 Methods:
   - Name: BindConstraint
     IsInternal: true

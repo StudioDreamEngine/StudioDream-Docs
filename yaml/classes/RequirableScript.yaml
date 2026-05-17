@@ -1,5 +1,5 @@
 Name: RequirableScript
-Description: An requirable script. #💀✌️
+Description: A script that can be required, returns the table returned by the script when require() is called.
 Category: Scripting
 BaseType: BaseScript
 IsAbstract: false

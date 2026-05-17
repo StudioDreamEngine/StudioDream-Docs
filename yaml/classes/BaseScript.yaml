@@ -13,9 +13,9 @@ Properties:
     Type: Task
     IsAccessible: false
     IsInternal: true
-    Description: The task line script is running. # Probably theres a better way to describe this
+    Description: The current task object the script is running under. # Probably theres a better way to describe this
   - Name: Require
-    Type: Task
+    Type: table
     IsAccessible: false
     IsInternal: true
     Description: Script contents after initalization.

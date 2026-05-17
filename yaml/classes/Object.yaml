@@ -1,0 +1,9 @@
+Name: Object
+Description: Base class for every kind of object by the engine
+Category: Internal
+IsAbstract: true
+Properties:
+- Name: Type
+    IsAccessible: true
+    IsSerialized: false
+    Type: string

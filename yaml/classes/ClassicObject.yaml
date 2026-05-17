@@ -1,4 +1,17 @@
 Name: ClassicObject
-Description: Base class for all things that use a class system.
-Category: General
+Description: Base class for all things that use a class system. (https://github.com/rxi/classic)
+Category: Internal
+BaseType: Object
 IsAbstract: true
+Methods:
+  - Name: extend
+    IsInternal: true
+    ReturnType: ClassicObject
+    Description: Extends the class, enabling for more features to be added on top of this class
+  - Name: is
+    IsInternal: true
+    ReturnType: boolean
+    Parameters: 
+      - Name: OtherObject
+        Type: string
+    Description: Checks if this object is the same type as OtherObject by comparing metatables
