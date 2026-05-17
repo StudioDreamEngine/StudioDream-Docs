@@ -1,0 +1,24 @@
+Name: Drawable3D
+Description: Base class for all 3D objects that can be drawn to the screen
+Category: 3D
+BaseType: Base3D
+IsAbstract: true
+Properties:
+  - Name: Drawable
+    IsInternal: true
+    Description: Internal 3DreamEngine object for this Drawable.
+    Type: DreamObject
+  - Name: Outline
+    Description: If this Drawable should have an outline effect
+    Type: boolean
+    IsSerialized: true
+  - Name: Scale
+    Type: Vector3
+    Description: The scale of this Drawable
+    IsAccessible: true
+    IsSerialized: true
+  - Name: Size
+    Type: Vector3
+    Description: The readonly bounding size of this Drawable
+    IsReadOnly: true
+    IsAccessible: true

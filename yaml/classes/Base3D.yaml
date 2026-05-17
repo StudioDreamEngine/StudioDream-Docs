@@ -1,0 +1,21 @@
+Name: Base3D
+Description: Base class for all 3D objects
+Category: 3D
+BaseType: Thing
+IsAbstract: true
+Properties:
+  - Name: Position
+    IsSerialized: false
+    IsAccessible: true
+    ReadOnly: true
+    Type: Vector3
+    Description: The ReadOnly Position of this 3D Object.
+  - Name: Transform
+    IsSerialized: true
+    IsAccessible: true
+    Type: Transform3D
+  - Name: Anchored
+    IsSerialized: true
+    IsAccessible: true
+    Description: If this object is Anchored
+    Type: boolean

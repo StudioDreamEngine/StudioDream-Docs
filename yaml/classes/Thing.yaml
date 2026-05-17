@@ -7,6 +7,7 @@ Properties:
   - Name: Serializable
     IsInternal: true
     Type: boolean
+    Description: If this object will be saved to a file
   - Name: Parent
     IsAccessible: true
     IsSerialized: true

@@ -51,9 +51,10 @@ def generate(source: path.Path, target: path.Path):
         def add_flags(prop):
             flags = []
 
-            if "IsAccessible" in prop.keys(): flags.append("Accessible")
-            if "IsSerialized" in prop.keys(): flags.append("Serialized")
-            if "IsInternal" in prop.keys(): flags.append("Internal")
+            if get_default(prop, "IsAccessible"): flags.append("Accessible")
+            if get_default(prop, "IsSerialized"): flags.append("Serialized")
+            if get_default(prop, "IsInternal"): flags.append("Internal")
+            if get_default(prop, "ReadOnly"): flags.append("ReadOnly")
 
             return f"``{"`` ``".join(flags)}``"
         
@@ -68,6 +69,12 @@ def generate(source: path.Path, target: path.Path):
         if "BaseType" in file_yaml.keys():
             append_line("")
             append_line(f"{{{{ inherits(\"{file_yaml["BaseType"]}\") }}}}")
+
+        children: list = get_default(inherited_by, name, None)
+    
+        if children and len(children) > 0:
+            append_line("")
+            append_line(f"{{{{ inherited_by([\"{"\", \"".join(children)}\"]) }}}}")
 
         append_line("")
         append_line(file_yaml["Description"])
@@ -94,7 +101,7 @@ def generate(source: path.Path, target: path.Path):
             append_line(f"### {prop["Name"]}:{type} {{ property }}")
             append_line(add_flags(prop))
             append_line("")
-            append_line(get_default(prop, "Description", "Missing Documentation!"))
+            append_line(get_default(prop, "Description", f"The {prop["Name"]} of this object."))
             append_line("")
 
         methods = ("Methods" in file_yaml) and file_yaml["Methods"] or []

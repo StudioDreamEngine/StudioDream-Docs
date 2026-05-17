@@ -7,21 +7,19 @@ Properties:
   - Name: Image
     Type: File
     IsAccessible: true
-    IsInternal: true
-    Description: The file directory that the image is gonna be displaying.
+    Description: The image resource that this object displays.
   - Name: ImageRect
     Type: Rect
     IsAccessible: true
-    IsInternal: true
-    Description: ???
+    Description: Optional property that determines what part of an image will be displayed
   - Name: ImageQuad
-    Type: Rect
+    Type: Quad
     IsAccessible: true
     IsInternal: true
-    Description: ???
+    Description: Underlying Love2D quad object used to draw the image
 Methods:
   - Name: SetImage
     ReturnType: None
     IsAccessible: false
     IsInternal: true
-    Description: Sets new image to Image2D.
+    Description: Sets a new Image.y

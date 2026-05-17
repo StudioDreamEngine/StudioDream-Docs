@@ -61,6 +61,7 @@ def define_env(env):
 
     @env.macro
     def inherited_by(classNames):
+        print(classNames)
         links = ", ".join(getClassLink(name) for name in classNames)
         return "Inherited by %s\n{ data-search-exclude }" % links
 

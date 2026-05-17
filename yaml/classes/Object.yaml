@@ -1,5 +1,5 @@
 Name: Object
-Description: Base class for every kind of object by the engine
+Description: Base class for every kind of object
 Category: Internal
 IsAbstract: true
 Properties:
@@ -7,4 +7,3 @@ Properties:
   IsAccessible: true
   IsSerialized: false
   Type: string
-  Description: The type of this object.
