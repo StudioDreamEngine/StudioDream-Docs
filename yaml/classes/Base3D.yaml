@@ -14,8 +14,8 @@ Properties:
     IsSerialized: true
     IsAccessible: true
     Type: Transform3D
-  - Name: Anchored
+  - Name: Dynamic
     IsSerialized: true
     IsAccessible: true
-    Description: If this object is Anchored
+    Description: If this object will be simulated by physics
     Type: boolean

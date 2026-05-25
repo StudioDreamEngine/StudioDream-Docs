@@ -1,0 +1,24 @@
+Name: Camera
+Description: The 3D Camera object
+Category: 3D
+BaseType: Base3D
+IsCreatable: true
+Properties:
+  - Name: FieldOfView
+    IsAccessible: true
+    IsSerialized: true
+    Description: The cameras Field of View
+  - Name: Viewport
+    ReadOnly: true
+    Description: The current Viewport the camera is rendering to
+    IsAccessible: true
+  - Name: Drawable
+    IsInternal: true
+    Description: Internal 3DreamEngine object for this Camera.
+    Type: DreamCamera
+Methods:
+  - Name: RayDirectionToPlane
+  - Name: LocalRayDirectionToPlane
+  - Name: GetFocalLength
+  - Name: VectorToWorldSpace
+  - Name: GetMouseRay

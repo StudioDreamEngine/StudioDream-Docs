@@ -1,28 +1,69 @@
 Name: Environment
-Description: Global container for showing visual stuff # placeholder desc until i find a better way to describe this
+Description: a container that can be used to display 3D Objects
 Category: Containers
 BaseType: Container
 IsAbstract: false
+IsCreatable: true
 Properties:
   - Name: Viewport
     Type: Thing
     IsAccessible: true
     IsInternal: true
-    Description: Current attached Viewport attached to Environment
+    ReadOnly: true
+    Description: the Current attached Viewport, Set by the viewport itself.
   - Name: Camera
-    Type: Thing
+    Type: Camera
     IsAccessible: true
+    Description: the Current attached Camera
+  - Name: StepPhysics
+    Type: boolean
+    IsAccessible: true
+    Description: If the physics in this Environment should be stepped each frame.
+  - Name: Gravity
+    Type: Vector3
+    IsAccessible: true
+    Description: The direction and strength of the gravity as a Vector3
+  - Name: DreamWorld
+    Type: DreamObject
     IsInternal: true
-    Description: Current attached Camera attached to Environment
+    Description: The 3DreamEngine world object
+  - Name: PhysicsWorld
+    Type: btDiscreteDynamicsWorld
+    IsInternal: true
+    Description: The Bullet physics world
+  - Name: PhysicsBodies
+    Type: table
+    IsInternal: true
+    Description: List of current bodies within the PhysicsWorld
 Methods:
   - Name: Raycast
-    ReturnType: Table
+    ReturnType: CastResult
+    Parameters:
+      - Name: Origin
+        Type: Vector3
+        Description: The origin position
+      - Name: Direction
+        Type: Vector3
+        Description: The direction of the ray
     IsAccessible: true
-    IsInternal: true
     Description: Shoots a raycast based at given origin position and direction position.
-  - Name: GetCamera
-    ReturnType: Thing
-    IsAccessible: true
+  - Name: RemoveBody
+    Parameters:
+      - Name: Child
+        Type: Drawable3D
     IsInternal: true
-    Description: Returns attached camera to container or attached viewport camera.
+    Description: Removes the physics body of the child object
+  - Name: HandlePhysicsHierachy
+    Parameters:
+      - Name: Child
+        Type: Drawable3D
+    IsInternal: true
+    Description: Handle the addition of this child to the PhysicsWorld if needed
+  - Name: ManageWorldHierachy
+    IsInternal: true
+    ReturnType: "{Drawable3D}"
+    Description: Manages general stuff regarding the objects within DreamWorld, PhysicsWorld and PhysicsBodies
+  - Name: PostStep
+    IsInternal: true
+    Description: Handles anything that needs to happen after a physics step, usually regarding updating transforms
   

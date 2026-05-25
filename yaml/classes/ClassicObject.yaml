@@ -1,5 +1,5 @@
 Name: ClassicObject
-Description: Base class for all things that use a class system. (https://github.com/rxi/classic)
+Description: Base class for all objects that use a class system. (https://github.com/rxi/classic)
 Category: Internal
 BaseType: Object
 IsAbstract: true

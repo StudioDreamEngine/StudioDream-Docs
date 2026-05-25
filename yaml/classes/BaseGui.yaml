@@ -14,6 +14,12 @@ Properties:
     IsAccessible: true
     IsInternal: true
     Description: The size of the thing relative to the viewport
+  - Name: Position
+    Type: Pivot2D
+    IsAccessible: true
+  - Name: Size
+    Type: Pivot2D
+    IsAccessible: true
 Methods:
   - Name: GetOffsetPosition
     ReturnType: Vector2

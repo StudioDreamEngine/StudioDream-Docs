@@ -8,10 +8,18 @@ Properties:
     IsInternal: true
     Type: boolean
     Description: If this object will be saved to a file
+  - Name: TruelySerializable
+    IsInternal: true
+    Type: boolean
+    Description: If this object or its parent is Serializable, currently only updated when re-parented
   - Name: Parent
     IsAccessible: true
     IsSerialized: true
     Type: Thing
+  - Name: Proxy
+    IsInternal: true
+    Description: Useful for things such as the properties tab, script calls, and serialization, more info is provided in the documentation for ThingProxy.
+    Type: ThingProxy
   - Name: Name
     IsAccessible: true
     IsSerialized: true
@@ -34,47 +42,103 @@ Properties:
 Methods:
   - Name: BindConstraint
     IsInternal: true
+
   - Name: SetConstraint
     IsInternal: true
+
   - Name: UnbindConstraints
     IsInternal: true
+
   - Name: FindConstraintOfType
     IsInternal: true
+
+  - Name: SetAttribute
+    Description: Allows you to store extra data in an object as an attribute
+    Parameters:
+      - Name: Name
+        Type: string
+      - Name: Value
+        Type: any
+
+  - Name: GetAttribute
+    Description: Gets an attribute
+    ReturnType: any
+    Parameters:
+      - Name: Name
+        Type: string
+
+  - Name: RemoveAttribute
+    Description: Removes an attribute
+    Parameters:
+      - Name: Name
+        Type: string
+
   - Name: GetProperty
+    Description: Get either the property or the override for it
+    Parameters:
+      - Name: Property
+        Type: string
+    ReturnType: any
     IsInternal: true
+
   - Name: FindFirstAncestorWithClass
     Parameters:
       - Name: Class
         Type: string
     Description: Goes up in the tree until it finds a Thing that matches the specified class
     ReturnType: Thing
+
   - Name: Is
     Description: Checks if this thing
     ReturnType: boolean
+
   - Name: GetParentCallback
     IsInternal: true
-  - Name: SetParent
+
+  - Name: IsSerializable
+    Description: Returns TruelySerializable
+    ReturnType: boolean
+
+  - Name: CheckRecursion
+    Description: Function used by SetParent to check if parenting to ``NewParent`` will cause a recursive parent to occur
     IsInternal: true
+    Parameters:
+      - Name: NewParent
+        Type: Thing
+    ReturnType: string
+
+  - Name: SetParent
+    Description: Sets the parent of the object
+    Parameters:
+      - Name: NewParent
+        Type: Thing
+    ReturnType: boolean
+  
   - Name: DescendantOf
     ReturnType: boolean
+
   - Name: IsA
     Parameters:
       - Name: Check
-        Type: "{ Thing }"
+        Type: "{Thing}"
         Description: Name of the class your trying to check
     ReturnType: boolean
     Description: Checks if thing class Is A certan class
+
   - Name: GetChildren
-    ReturnType: "{ Thing }"
-    Description: Returns a table of all the children inside the thing, that does not include children inside the childre
+    ReturnType: "{Thing}"
+    Description: Returns a table of all the children inside the thing, that does not include children inside the children
+
   - Name: GetDescendants
-    ReturnType: "{ Thing }"
+    ReturnType: "{Thing}"
     Description: Returns a table of everything inside the thing
+
   - Name: FindFirstChild
     Parameters:
       - Name: Filter
-        Type: "{ Thing }"
-        Description: Name of the children your trying to find
+        Type: "{Thing}"
+        Description: Name of the child your trying to find
+
   - Name: ClearAllChildren
     Parameters:
       - Name: Filter
