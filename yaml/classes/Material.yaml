@@ -1,0 +1,105 @@
+Name: Material
+Description: Thing that edits the render of Primitives and Meshes
+Category: 3D
+BaseType: Thing
+IsAbstract: false
+IsCreatable: true
+Properties:
+  - Name: Color
+    Type: Color
+    IsAccessible: true
+    Description: Base color of the material
+  - Name: Emission
+    Type: Color
+    IsAccessible: true
+    Description: Color of emission
+  - Name: EmissionFactor
+    Type: Color
+    IsAccessible: true
+    Description: Color of emission factor
+  - Name: Roughness
+    Type: number
+    IsAccessible: true
+     
+    Description: How much rough the material is
+  - Name: Metallic
+    Type: number
+    IsAccessible: true
+     
+    Description: How much metallic the material is
+  - Name: Alpha
+    Type: boolean
+    IsAccessible: true
+     
+    Description: Does cut alpha pixels from texture
+  - Name: Stencil
+    Type: boolean
+    IsAccessible: true
+     
+    Description: ???
+  - Name: Cutout
+    Type: boolean
+    IsAccessible: true
+     
+    Description: Does cut alpha pixels from texture
+  - Name: Particle
+    Type: boolean
+    IsAccessible: true
+     
+    Description: Shader thingy idk
+  - Name: AlphaCutoff
+    Type: number
+    IsAccessible: true
+     
+    Description: How much cuts Alpha pixels from texture
+  - Name: IOR
+    Type: number
+    IsAccessible: true
+     
+    Description: ???
+  - Name: Translucency
+    Type: number
+    IsAccessible: true
+     
+    Description: How much translucency the material is
+  - Name: CullMode
+    Type: Enum
+    IsAccessible: true
+     
+    Description: CullMode wow! (Sorry guys the vague stuff is the stuff idk how it actually works!!)
+  - Name: NormalTexture
+    Type: Texture
+    IsAccessible: true
+     
+    Description: Texture Applied on Material
+  - Name: EmissionTexture
+    Type: Texture
+    IsAccessible: true
+     
+    Description: Texture Applied on Material
+  - Name: MaterialTexture
+    Type: Texture
+    IsAccessible: true
+     
+    Description: Texture Applied on Material
+  - Name: AlbedoTexture
+    Type: Texture
+    IsAccessible: true
+     
+    Description: Texture Applied on Material
+  - Name: Reflective
+    Type: Texture
+    IsAccessible: true
+     
+    Description: Texture Applied on Material
+  - Name: MultiTextureBlendScale
+    Type: number
+    IsAccessible: true
+     
+    Description: eh
+  - Name: BlendTexture
+    Type: Texture
+    IsAccessible: true
+     
+    Description: Texture Applied on Material
+  

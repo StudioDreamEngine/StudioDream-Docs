@@ -1,0 +1,40 @@
+Name: Audio
+Description: Audio thing
+Category: Audio
+BaseType: Audio
+IsCreatable: true
+Properties:
+  - Name: DoesLoop
+    Type: boolean
+    IsAccessible: true
+    IsInternal: false
+    Description: Makes the audio loop if true
+  - Name: Volume
+    Type: number
+    IsAccessible: true
+    IsInternal: false
+    Description: Volume of the Resource audio
+  - Name: Duration
+    Type: number
+    IsAccessible: true
+    IsInternal: false
+    Description: Total seconds the audio Handles
+  - Name: TimePosition
+    Type: number
+    IsAccessible: true
+    IsInternal: false
+    Description: Time position of the audio
+  - Name: StoppedPlaying
+    Type: Signal
+    IsAccessible: true
+    IsInternal: false
+    Description: Send a signal to the connected functions when the audio stops playing
+Methods:
+  - Name: Play
+    Description: Plays the Resource audio attached
+  - Name: Stop
+    Description: Stops the audio and Rewinds it
+  - Name: Rewind
+    Description: Make audio seek from the start
+  - Name: Pause
+    Description: Pauses the audio
