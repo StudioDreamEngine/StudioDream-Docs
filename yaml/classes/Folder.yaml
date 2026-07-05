@@ -1,7 +1,7 @@
 Name: Folder
 Description: Used to organize things.
 Category: Containers
-BaseType: Container
+BaseType: ViewportContainer
 IsAbstract: false
 Properties:
   - Name: LockObjectsIn

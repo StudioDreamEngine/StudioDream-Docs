@@ -25,4 +25,5 @@ for category in os.listdir(source_path):
 # Generate 
 classes.generate(source_path / "classes", target_path / "classes")
 classes.generate(source_path / "types", target_path / "types")
+classes.generate(source_path / "services", target_path / "services")
 #classes.generate(source_path / "runtime", target_path / "runtime")
