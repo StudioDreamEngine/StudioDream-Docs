@@ -151,7 +151,7 @@ def generate(source: path.Path, target: path.Path):
 
             append_line(f"### {event["Name"]}({",".join(params)}) {{ event }}")
             append_line("")
-            append_line(get_default(method, "Description", "Missing Documentation!"))
+            append_line(get_default(event, "Description", "Missing Documentation!"))
             append_line("")
 
         #print(mk)
