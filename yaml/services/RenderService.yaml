@@ -1,0 +1,11 @@
+Name: RenderService
+Description: iouhjftgoijdfgjiosdfgfoijweoijwoikfoikfoikoikrfoikrfr uwu :3
+Category: Tick
+IsCreatable: true
+Properties:
+ 
+Methods:
+  
+Events:
+  - Name: OnStep
+    Description: Called everytime RenderService updates
