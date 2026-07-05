@@ -98,6 +98,9 @@ def generate(source: path.Path, target: path.Path):
         for prop in properties:
             type = get_default(prop, "Type", "void")
 
+            if not ("IsAccessible" in prop.keys()):
+                prop["IsAccessible"] = True
+
             append_line(f"### {prop["Name"]}:{type} {{ property }}")
             append_line(add_flags(prop))
             append_line("")

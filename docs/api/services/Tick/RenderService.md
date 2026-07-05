@@ -8,6 +8,7 @@ icon: studiodream/Unknown
 
 iouhjftgoijdfgjiosdfgfoijweoijwoikfoikfoikoikrfoikrfr uwu :3
 
+<<<<<<< HEAD
 {{ notnewable() }}
 
 
@@ -17,3 +18,5 @@ iouhjftgoijdfgjiosdfgfoijweoijwoikfoikfoikoikrfoikrfr uwu :3
 
 Called everytime RenderService updates
 
+=======
+>>>>>>> 05af7c61d01cb685f33b14c8a63ff6b025e2950a
