@@ -13,7 +13,7 @@ iouhjftgoijdfgjiosdfgfoijweoijwoikfoikfoikoikrfoikrfr uwu :3
 
 ## Signals
 
-### OnStep(deltatime (Listener);number) { event }
+### OnStep(deltatime [Listener];number) { event }
 
 Called everytime RenderService updates
 

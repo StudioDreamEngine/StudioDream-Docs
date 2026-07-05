@@ -13,15 +13,15 @@ iouhjftgoijdfgjiosdfgfoijweoijwoikfoikfoikoikrfoikrfr uwu :3
 
 ## Signals
 
-### KeyEvent(key (Listener);Enum.InputCode,pressed;boolean) { event }
+### KeyEvent(key [Listener];Enum.InputCode,pressed;boolean) { event }
 
 Called whenever a key is pressed and/or released.
 
-### MouseEvent(key (Listener);Enum.InputCode,pressed;boolean) { event }
+### MouseEvent(key [Listener];Enum.InputCode,pressed;boolean) { event }
 
 Called whenever a key is pressed and/or released.
 
-### MouseMoved(key (Listener);Enum.InputCode,pressed;boolean) { event }
+### MouseMoved(key [Listener];Enum.InputCode,pressed;boolean) { event }
 
 Called whenever a key is pressed and/or released.
 
