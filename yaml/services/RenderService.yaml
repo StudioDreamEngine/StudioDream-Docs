@@ -1,11 +1,13 @@
 Name: RenderService
 Description: iouhjftgoijdfgjiosdfgfoijweoijwoikfoikfoikoikrfoikrfr uwu :3
 Category: Tick
-IsCreatable: true
 Properties:
  
 Methods:
   
-Events:
+Signals:
   - Name: OnStep
+    Parameters:
+     - Name: deltatime
+       Type: number
     Description: Called everytime RenderService updates

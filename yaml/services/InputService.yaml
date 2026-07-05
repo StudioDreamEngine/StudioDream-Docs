@@ -1,0 +1,28 @@
+Name: InputService
+Description: iouhjftgoijdfgjiosdfgfoijweoijwoikfoikfoikoikrfoikrfr uwu :3
+Category: Input
+Properties:
+Methods:
+  
+Signals:
+  - Name: KeyEvent
+    Parameters:
+      - Name: key
+        Type: Enum.InputCode
+      - Name: pressed
+        Type: boolean
+    Description: Called whenever a key is pressed and/or released.
+  - Name: MouseEvent
+    Parameters:
+      - Name: key
+        Type: Enum.InputCode
+      - Name: pressed
+        Type: boolean
+    Description: Called whenever a key is pressed and/or released.
+  - Name: MouseMoved
+    Parameters:
+      - Name: key
+        Type: Enum.InputCode
+      - Name: pressed
+        Type: boolean
+    Description: Called whenever a key is pressed and/or released.

@@ -6,7 +6,7 @@ icon: studiodream/Environment
 
 # :studiodream-Environment: Environment
 
-{{ inherits("Thing") }}
+{{ inherits("ViewportContainer") }}
 
 iouhjftgoijdfgjiosdfgfoijweoijwoikfoikfoikoikrfoikrfr uwu :3
 
