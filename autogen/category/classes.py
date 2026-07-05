@@ -147,7 +147,7 @@ def generate(source: path.Path, target: path.Path):
 
             for param in parameters:
                 if not was_first: 
-                    params.append(f"{param["Name"]} (Listener);{param["Type"]}")
+                    params.append(f"{param["Name"]} [Listener];{param["Type"]}")
                     was_first = True
                 else:
                     params.append(f"{param["Name"]};{param["Type"]}")
