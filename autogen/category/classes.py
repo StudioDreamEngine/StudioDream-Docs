@@ -129,7 +129,30 @@ def generate(source: path.Path, target: path.Path):
             append_line(get_default(method, "Description", "Missing Documentation!"))
             append_line("")
 
-        # TODO: Events
+        events = ("Events" in file_yaml) and file_yaml["Events"] or []
+
+        if len(events) > 0:
+            append_line("")
+            append_line("## Events")
+            append_line("")
+
+        for event in events:
+            parameters = get_default(event, "Parameters", [])
+            params = []
+
+            was_first = False
+
+            for param in parameters:
+                if not was_first: 
+                    params.append(f"{param["Name"]} (Listener);{param["Type"]}")
+                    was_first = True
+                else:
+                    params.append(f"{param["Name"]};{param["Type"]}")
+
+            append_line(f"### {event["Name"]}({",".join(params)}) {{ event }}")
+            append_line("")
+            append_line(get_default(method, "Description", "Missing Documentation!"))
+            append_line("")
 
         #print(mk)
 
