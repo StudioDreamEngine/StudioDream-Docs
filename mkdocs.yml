@@ -56,6 +56,7 @@ markdown_extensions:
   - sane_lists
   
   - toc:
+      toc_depth: 3
       permalink: true
 
   - pymdownx.emoji:
@@ -64,3 +65,8 @@ markdown_extensions:
       options:
         custom_icons:
           - docs/theme/.icons
+
+extra_css:
+  - assets/extra.css
+validation:
+  absolute_links: ignore
