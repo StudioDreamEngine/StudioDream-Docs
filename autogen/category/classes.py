@@ -149,7 +149,7 @@ def generate(source: path.Path, target: path.Path):
                 else:
                     params.append(f"{param["Name"]};{param["Type"]}")
 
-            append_line(f"### {signal["Name"]}({",".join(params)}) {{ signal }}")
+            append_line(f"### {signal["Name"]}({",".join(params)}) {{ event }}")
             append_line("")
             append_line(get_default(signal, "Description", "Missing Documentation!"))
             append_line("")
